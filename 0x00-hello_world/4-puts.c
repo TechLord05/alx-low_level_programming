@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /*
- * main - Entry point
+ * Description:  main - Marks the start of the code
  *
  * Return: 0 if success
 */
