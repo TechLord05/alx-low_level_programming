@@ -4,7 +4,7 @@
  * _strspn - Gets the length of a prefix substring
  * @s: The string to be searched
  * @accept: The prefix substring to be measured
- * Return: The number of btyes in s which consist only bytes 
+ * Return: The number of btyes in s which consist only bytes
  * from accept
  */
 
@@ -19,7 +19,7 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (*s == accept[length])
 			{
-				nob ++;
+				nob++;
 				break;
 			}
 			else if (accept[length + 1] == '\0')
