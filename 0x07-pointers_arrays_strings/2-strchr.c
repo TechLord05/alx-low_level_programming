@@ -9,13 +9,15 @@
 
 char *_strchr(char *s, char c)
 {
-	while (*s != '\0')
+	int length = 0;
+
+	while (s[length] != '\0')
 	{
-		if (*s == c)
+		if (s[length] == c)
 		{
-			return (s);
+			return (s + length);
 		}
-		s++;
+		length++;
 	}
 	return ('\0');
 }
