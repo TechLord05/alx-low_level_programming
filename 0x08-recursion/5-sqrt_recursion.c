@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * sqrt_real - return natural square root of 
+ * sqrt_real - return natural square root of
  * a number
- * @n: input number
- * @c: iterator
- * Return: square root 0r -1
+ * @a: input number
+ * @b: iterator
+ * Return: square root or -1
  */
 int sqrt_real(int a, int b)
 {
