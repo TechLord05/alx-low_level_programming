@@ -2,25 +2,24 @@
 
 /**
  * add_node - add a new node at the beginning
- * @head: head
- * @str: str to duplicate
- *
- * Return: new address
+ * head: the pointer to the first node
+ * @str: string to duplicate
+ * Return: The new address
  */
 
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *s = malloc(sizeof(list_t));
+	list_t *c = malloc(sizeof(list_t));
 
-	if (s == NULL)
+	if (c == NULL)
 		return (NULL);
 
-	s->str = strdup(str);
-	s->len = strlen(str);
-	s->next = NULL;
+	c->str = strdup(str);
+	c->len = strlen(str);
+	c->next = NULL;
 
-	s->next = *head;
-	*head = s;
+	c->next = *head;
+	*head = c;
 
-	return (s);
+	return (c);
 }
