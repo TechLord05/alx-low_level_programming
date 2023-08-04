@@ -9,18 +9,20 @@
  *
  * Return: pointer to the address of the new memory block
  */
+
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *temp;
+	void *temp_block;
 	unsigned int i;
 
 	if (ptr == NULL)
 	{
-		temp = malloc(new_size);
-		return (temp);
+		temp_block = malloc(new_size);
+		return (temp_block);
 	}
 	else if (new_size == old_size)
 		return (ptr);
+
 	else if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
@@ -28,13 +30,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 	else
 	{
-		temp = malloc(new_size);
-		if (temp != NULL)
+		temp_block = malloc(new_size);
+		if (temp_block != NULL)
 		{
 			for (i = 0; i < min(old_size, new_size); i++)
-				*((char *)temp + i) = *((char *)ptr + i);
+				*((char *)temp_block + i) = *((char *) ptr + i);
 			free(ptr);
-			return (temp);
+			return (temp_block);
 		}
 		else
 			return (NULL);
