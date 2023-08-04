@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _power - calculate (base and power)
+ * _thepower - calculate (base and power)
  * @base: base of the exponet
- * @pow: power of the exponet
+ * @powr: power of the exponet
  * Return: value of base and power
  */
 unsigned long int _thepower(unsigned int base, unsigned int powr)
@@ -17,12 +17,12 @@ unsigned long int _thepower(unsigned int base, unsigned int powr)
 }
 /**
  * print_binary - prints the binary representation of a number
- * @n: number to be printed 
+ * @n: number to be printed
  * Return: void
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int devp, returns;
+	unsigned long int devp, returs;
 	char flags;
 
 	flags = 0;
@@ -30,8 +30,8 @@ void print_binary(unsigned long int n)
 
 	while (devp != 0)
 	{
-		returns = n & devp;
-		if (returns == devp)
+		returs = n & devp;
+		if (returs == devp)
 		{
 			flags = 1;
 			_putchar('1');
