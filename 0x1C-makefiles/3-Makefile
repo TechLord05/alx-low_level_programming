@@ -10,7 +10,7 @@ all : $(OBJ)
 
 # Rule to clean Emacs and Vim temporary files, object files, and the executable
 clean :
-		$(RM) *~ $(OBJ)
+		$(RM) *~ *.swp $(OBJ)
 
 # Rule to delete object files
 oclean :
@@ -20,4 +20,4 @@ oclean :
 fclean : clean oclean
 
 # deletes all and recompiles all source files
-re : oclean all
+re : fclean all
