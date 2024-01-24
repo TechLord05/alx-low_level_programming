@@ -1,11 +1,12 @@
-#include <stdio.h>
-#include "school.h"
+#include "m.h"
 
-int main() {
-    int a = 5, b = 7;
-    int sum = add_numbers(a, b);
-
-    printf("Sum: %d\n", sum);
-
-    return 0;
+/**
+ * main - Entry point
+ *
+ * Return: Always 
+ */
+int main(void)
+{
+	print_school();
+	return (EXIT_SUCCESS);
 }
