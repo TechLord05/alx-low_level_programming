@@ -5,3 +5,22 @@ NAME = school
 
 all: $(OBJ)
 		$(CC) $(OBJ) -o $(NAME)
+
+
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+all: $(SRC)
+        $(CC) $(SRC) -o $(NAME)
+
+clean:
+        rm -f *~ *.swp $(OBJ)
+
+oclean:
+        rm -f $(OBJ)
+
+fclean: clean oclean
+
+re: fclean all
