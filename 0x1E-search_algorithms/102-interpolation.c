@@ -17,22 +17,22 @@ int interpolation_search(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 
-	for (left = 0, right = size -1; left <= right;)
+	for (left = 0, right = size - 1; left <= right;)
 	{
 		est = left + (((double)((right - left) / (array[right] - array[left]))) *
 				(value - array[left]));
 		if (est < size)
 		{
-			printf ("Value checked array[%ld] = [%d]\n", est, array[est]);
+			printf("Value checked array[%ld] = [%d]\n", est, array[est]);
 		}
 		else
 		{
-			printf ("Value checked array[%ld] is out of range\n", est);
+			printf("Value checked array[%ld] is out of range\n", est);
 			break;
 		}
 
 		if (array[est] == value)
-			return(est);
+			return (est);
 		else if (array[est] < value)
 			left = est + 1;
 		else
