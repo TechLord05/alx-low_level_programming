@@ -33,7 +33,7 @@ int interpolation_search(int *array, size_t size, int value)
 
 		if (array[est] == value)
 			return (est);
-		else if (array[est] < value)
+		if (array[est] < value)
 			left = est + 1;
 		else
 			right = est - 1;
